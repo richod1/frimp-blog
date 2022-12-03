@@ -98,4 +98,24 @@ font-size:18px;
 `
 
 const BannerButton=styled(LinkR)`
-border:
+border:none;
+border-radius:50px;
+background:#010606;
+text-decoration:none;
+color:#fff;
+cursor:pointer;
+outline:none;
+display:flex;
+transition:all 0.2s ease-out;
+justify-content:center;
+align-items:center;
+white-space:nowrap;
+font-size:16px;
+padding 12px 30px;
+
+&:hover{
+    transition:all 0.2s ease-out;
+    background:#000; 
+}
+`
+
