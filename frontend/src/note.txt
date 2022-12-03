@@ -1,0 +1,27 @@
+#create front-end with react
+#create back-end in node js 
+#use axios to hook both
+#tools used express mongodb
+#host front end on firebase
+
+#host backend on mongodb
+ style use styled compnents
+
+
+
+
+
+
+
+ 
+
+
+
+function NavHead() {
+  return (
+  
+  )
+}
+
+export default NavHead
+
