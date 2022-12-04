@@ -1,8 +1,22 @@
 import express from 'express'
+import mongoose from 'mongoose'
 
 const port = process.env.PORT || 8000;
 const app = express()
 
+
+//api response
+const connection_url=""
+
+
+
+//middileware
+app.use(express.json());
+
+//the res getter
+mongoose.connect(connection_url,{
+    useNewUrlParser:true,
+})
 
 //endpoint
 

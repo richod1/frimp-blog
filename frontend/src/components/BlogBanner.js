@@ -4,118 +4,104 @@ import {Link as LinkR} from 'react-router-dom'
 
 function BlogBanner() {
   return (
-    <>
-    <Container to="home">
-        <BannerImg >
-           <img src="https://images.pexels.com/photos/4078342/pexels-photo-4078342.jpeg?auto=compress&cs=tinysrgb&w=600" alt="This is the image"/>
-        </BannerImg>
-        <BannerContent>
-            <BannerH1>This is the blog</BannerH1>
-            <BannerP>This is where all banner deytailes will go</BannerP>
-        <Wrapper>
-        <BannerButton>START READING</BannerButton>
-       </Wrapper>
-        </BannerContent>
-    </Container></>
+   <>
+   <Container>
+    <HoverBg>
+        <img src="https://images.pexels.com/photos/7046399/pexels-photo-7046399.jpeg?auto=compress&cs=tinysrgb&w=600" alt="bg"/>
+    </HoverBg>
+    <HoverContent>
+        <HoverH1>Blog ono on </HoverH1>
+        <HoverP>this is the blog we are talking abaout..</HoverP>
+        <HoverBtn>
+            <HoverBtnLink>GET STARTED</HoverBtnLink>
+        </HoverBtn>
+    </HoverContent>
+   </Container>
+   
+   </>
   )
 }
 
 export default BlogBanner
+const Container=styled.div`
 
-const Container = styled.div`
 display:flex;
-align-items:center;
-
 justify-content:center;
-z-index:1;
-position:relative;
+align-items:center;
 padding:0 30px;
-height:300px;
+height:800px;
+position:relative;
+z-index:1;
 `
 
-const Wrapper=styled.div`
 
-`
 
-const BannerImg=styled(LinkR)`
+
+
+const HoverBg=styled(LinkR)`
 position:absolute;
-top:2px;
-left:0;
+top:0;
 right:0;
 bottom:0;
-height:100%;
+left:0;
 width:100%;
+height:85%;
 overflow:hidden;
 
-img{
+  img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    background:#232a34;
     -o-object-fit:cover;
-}
+    object-fit:cover;
+    
+  }
+
+
+
 `
 
-const BannerContent=styled.div`
-position:absolute;
-display:flex;
-flex-direction:column;
-padding:5px 24px;
-align-items:center;
-z-index:3;
-max-width:70vw;
-height:35vh;
+const HoverContent=styled.div`
+text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 `
 
-const BannerH1=styled.h1`
+const HoverH1=styled.h1`
+font-size:2.5rem;
 color:#fff;
-align-items:center;
-font-size:58px;
-
-@media screen and(max-width:760px){
-    font-size:40;
-}
-
-@media screen and (max-width: 460px){
-    font-size:32px;
-}
 `
-
-const BannerP=styled.p`
-margin-top:24px;
-color:#fff;
-max-width:600px;
-font-size:24px;
-text-align:center;
+const HoverP=styled.p`
+font-size:2.5rem;
+color:#000;
 
 @media screen and (max-width:760px){
-font-size:24px;
+    font-size:1.5rem;
 }
 
-@media screen and (max-width: 460px){
-font-size:18px;
+@media screen and (max-width:460px){
+    font-size:4px;
 }
 `
-
-const BannerButton=styled(LinkR)`
-border:none;
-border-radius:50px;
-background:#010606;
-text-decoration:none;
-color:#fff;
-cursor:pointer;
+const HoverBtn=styled.div`
+font-size:1.5rem;
 outline:none;
-display:flex;
-transition:all 0.2s ease-out;
-justify-content:center;
-align-items:center;
-white-space:nowrap;
-font-size:16px;
-padding 12px 30px;
+margin-top:4px;
+
+`
+const HoverBtnLink=styled(LinkR)`
+text-decoration:none;
+outline:none;
+border-radius:10px;
+background:powderblue;
+border:none;
+padding:0.7rem 1rem;
+color:#000;
 
 &:hover{
-    transition:all 0.2s ease-out;
-    background:#000; 
-}
+    background:#010607;
+    transition:all 0.2s ease-in-out;
+    color:#fff;
 `
-
